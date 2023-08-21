@@ -5,8 +5,9 @@ from faker import Faker
 
 # Create your views here.
 def index(request): # 첫번째 인자는 항상 request
-    return render(request, 'index.html') # 두가지 요소를 조합해서 rendering을 함. index html 에 html의 형식이 아닌 것들을 넣고 그것을 html로 완성시킴 
-
+    return render(request, 'index.html') 
+    # 두가지 요소를 조합해서 rendering을 함. index html 에 html의 형식이 아닌 것들을 넣고 그것을 html로 완성시킴 
+    # 
 def hello(request):
     username = '홍길동'
     result = {
@@ -84,3 +85,4 @@ def posts(request):
         'posts': fake_posts,
     }
     return render(request, 'posts.html', result)
+
